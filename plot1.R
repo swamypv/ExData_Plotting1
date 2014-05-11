@@ -11,7 +11,7 @@ header_data <- read.table(file="./household_power_consumption.txt", sep=";", str
 names(energy.data) <- header_data
 
 #Create histogram with color, heading and width and height
-hist(energy.data$Global_reactive_power, xlab="Global Active Power (Kilowatts)", col="RED", main="Global Active Power")
+hist(energy.data$Global_active_power, xlab="Global Active Power (Kilowatts)", col="RED", main="Global Active Power")
 #Copy histogram to png file
 dev.copy(device=png, file="./ExData_Plotting1/plot1.png", width=480, height=480)
 
