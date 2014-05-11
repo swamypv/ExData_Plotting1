@@ -3,7 +3,7 @@ plot1 <- function(){
 #get lines numbers of the data where date is matching  
 lines <- grep('^[1-2]/2/2007', readLines("household_power_consumption.txt"))
 #Read the data              
-energy.data <- read.table(file="./household_power_consumption.txt", sep=";", stringsAsFactors=F, header=TRUE, skip=lines[1]-1, nrows=length(lines))
+energy.data <- read.table(file="./household_power_consumption.txt", sep=";", stringsAsFactors=F, header=TRUE, skip=lines[1]-1, nrows=length(lines)-1)
 
 #Read header
 header_data <- read.table(file="./household_power_consumption.txt", sep=";", stringsAsFactors=F, header=FALSE,  nrows=1)
